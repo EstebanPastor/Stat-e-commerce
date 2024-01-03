@@ -1,8 +1,10 @@
-import React from 'react'
+import Navbar from './components/ui/navbar/Navbar'
 
 function Home() {
   return (
-    <div>page</div>
+    <div className='px-5 max-w-[1200px] mx-auto'>
+      <Navbar/>
+    </div>
   )
 }
 
