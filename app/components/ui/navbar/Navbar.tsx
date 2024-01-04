@@ -59,7 +59,7 @@ const Navbar = (props: Props) => {
                 showProfile ? "" : "hidden"
               }`}
             >
-              <Link href={"/signin"}>Sign In</Link>
+              <Link href={"/sign-in"}>Sign In</Link>
             </div>
           </div>
           <Link href={"/cart"}>
