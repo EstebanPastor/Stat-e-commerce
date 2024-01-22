@@ -9,8 +9,27 @@ datasource db {
 }
 
 model User {
-  id       Int     @id @default(autoincrement())
+  id       Int       @id @default(autoincrement())
   name     String?
-  email    String  @unique
+  email    String    @unique
   password String
+  Product  Product[]
+}
+
+model Product {
+  id          Int    @id @default(autoincrement())
+  title       String
+  description String
+  category    String
+  style       String
+  store       String
+  size        String
+  inventory   Int
+  color       String
+  price       Int
+  images      String
+  userId      Int
+  User        User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId], name: "idx_userId")
 }
